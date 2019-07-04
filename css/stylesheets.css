@@ -1,0 +1,169 @@
+/*css voor resume sandra*/
+
+/* Kleurenpalet
+#BBE5ED Blue lagoon
+#48D1CC Medium Turquoise
+#048A81 Teal Green
+#06D6A0 Carribean Green
+#503D3F Dark Puce
+*/
+
+/* Global -------------------------------------------------------------- */
+
+/* Fix voor grootte van boxen. Hiermee kan je padding
+en border aanpassen zonder dat het effect heeft op de width */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* Einde Fix */
+
+
+body {
+    background: mediumturquoise;
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+}
+h1, h2 {
+    font-family: "caveat", cursive;
+}
+h1 {
+    font-size: 80px;
+}
+h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+h3 {
+    margin:0;
+    margin-bottom:10px;
+}
+a {
+    color:#06D6A0;
+}
+a:hover {
+    text-decoration: none;
+}
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: auto;
+}
+.werk p:first-of-type {
+    margin-top: 0;
+}
+.hoofdletter {
+    text-transform: uppercase;
+}
+.btn {
+    text-decoration: none;
+    background: #48D1CC;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/* Header and Footer -------------------------------------------------------------- */
+header {
+    padding-top: 50px;
+    position: relative;
+}
+header, footer {
+    background:#048A81;
+    color:#BBE5ED;
+}
+header h1, header h2 {
+    color:#06D6A0;
+    margin:0;
+}
+.profile-img {
+    border-radius: 50%;
+}
+footer {
+    text-align: center;
+}
+.contact-info a {
+    padding: 20px;
+    display: inline-block;
+    font-size: 30px;
+}
+.download {
+    position:absolute;
+    bottom: 0;
+    right:0;
+}
+
+/* Navigation -------------------------------------------------------------- */
+nav {
+    text-align: center;
+    position: fixed;
+    background: #BBE5ED;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+nav a {
+    display: inline-block;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Werkervaring -------------------------------------------------------------- */
+.werkervaring {
+    background:#BBE5ED;
+}
+h3 ~ p {
+    margin:0;
+}
+
+/* Opleidingen -------------------------------------------------------------- */
+.opleidingen {
+/*    background-image: url("../img/ilya-pavlov-87438-unsplash.jpg");*/
+/*    background-size:cover;*/
+/*    color: #BBE5ED;*/
+    background: linear-gradient(rgba(187, 229, 237, 0.95), rgba(4, 138, 129, 0.9)),
+        url(../img/ilya-pavlov-87438-unsplash.jpg) no-repeat fixed;
+    background-size: cover;
+}
+p + h3 {
+    margin-top: 30px;
+}
+
+/* Responsive part: Media queries -------------------------------------------------------------- */
+/* Creeërt 2 kolommen voor groter scherm */
+@media (min-width:900px) {
+    .col-narrow {
+        width: 30%;
+        float: left;
+        clear: both;
+        margin-bottom: 30px;
+    }
+    .col-wide {
+        width: 70%;
+        padding-left: 20px;
+        float: left;
+    }
+}
+
+/* Verkleint header voor kleiner scherm */
+@media (max-width:899px) {
+    header h1 {
+        font-size:60px;
+    }
+    header {
+        text-align: center;
+    }
+}
+
+/* Verkleint profiel foto bij kleiner scherm */
+@media (max-width:550px) {
+    .profile-img {
+        width: 150px;
+    }
+}
