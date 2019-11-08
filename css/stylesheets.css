@@ -55,9 +55,6 @@ a:hover {
 .werk p:first-of-type {
     margin-top: 0;
 }
-.hoofdletter {
-    text-transform: uppercase;
-}
 .btn {
     text-decoration: none;
     background: #48D1CC;
